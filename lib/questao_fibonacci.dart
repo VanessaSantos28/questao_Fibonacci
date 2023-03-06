@@ -1,4 +1,13 @@
-import 'package:flutter/material.dart';
+void main() {
+  int number = 28;
+  List<int> finalFibSequence = fibonacciSequence(number);
+  print("A sequência de Fibonacci até $number é: $finalFibSequence");
+  if (isFibonacciNumber(number)) {
+    print("$number faz parte da sequência de fibonacci.");
+  } else {
+    print("$number não faz parte da sequência de Fibonacci.");
+  }
+}
 
 List<int> fibonacciSequence(int n) {
   List<int> fib = [0, 1];
@@ -13,13 +22,4 @@ bool isFibonacciNumber(int x) {
   return fibNumber.contains(x);
 }
 
-void main() {
-  int number = 28;
-  List<int> finalFibSequence = fibonacciSequence(number);
-  print("A sequência de Fibonacci até $number é: $finalFibSequence");
-  if (isFibonacciNumber(number)) {
-    print("$number faz parte da sequência de fibonacci.");
-  } else {
-    print("$number não faz parte da sequência de Fibonacci.");
-  }
-}
+
